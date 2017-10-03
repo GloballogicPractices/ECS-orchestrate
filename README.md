@@ -37,6 +37,9 @@ Script works in two different modes:
 1. Boto3
 2. Python YAML
 
+#### NOTE: 
+There are some issues with setting up autoscaling based on both CPU and Memory at a same time. Currently, We can't set AND|OR condition in service autoscaling. 
+So setting up CPU and Memory based autoscaling at a same time might trigger two confliting alarms at a same time. i.e we can have a situation where one alarm would try to scalein and other would try to scaleout at a same time. 
 
 ### Tool usage:
 
